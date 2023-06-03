@@ -3,7 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Akun;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,9 +17,23 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        DB::table('akun')->insert([
+            [
+                'email' => 'email@gmail.com',
+                'password' => 'password',
+            ],
+            [
+                'email' => 'email2@gmail.com',
+                'password' => 'password',
+            ],
+            [
+                'email' => 'email3@gmail.com',
+                'password' => 'password',
+            ],
+            [
+                'email' => 'email4@gmail.com',
+                'password' => 'password',
+            ],
+        ]);
     }
 }

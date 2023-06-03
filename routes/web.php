@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AkunController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::get('/', function () {
 // Route::resource('/produk', produk::class);
 
 Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
+
+Route::get('/form', [AkunController::class, 'index']);
+Route::post('/form', [AkunController::class, 'store'])->name('form.store');
